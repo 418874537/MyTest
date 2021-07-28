@@ -37,40 +37,18 @@ public class LengthOfLongestSubstring {
   public int lengthOfLongestSubstring(String s) {
     char[] chars = s.toCharArray();
     HashMap<Character, Integer> map = new HashMap<>();
-    Integer length = 0;
-    for(int i = 0;i<chars.length;i++){
+    int info = -1;
+    int max = 0;
+    for (int i = 0;i<chars.length;i++){
       if(map.get(chars[i])!=null){
-        int size = map.size();
-        if(size>length){
-          length = size;
-        }
-        map.clear();
+        info = map.get(chars[i])>info?map.get(chars[i]):info;
+
       }
-      map.put(chars[i],i);
-      System.out.println(length);
+      map.put(chars[i], i);
+      max = i-info > max? i-info:max;
+
     }
-    int size = map.size();
-    if(size>length){
-      length = size;
-    }
-    return length;
+    return max;
   }
 
-  /**
-   * 字符串是否有重复字符
-   * @param substring
-   * @return
-   */
-  private boolean hasRepet(String substring) {
-    char[] chars = substring.toCharArray();
-    HashMap<Character, Integer> map = new HashMap<>();
-    for (char c:chars){
-      if(map.get(c)!=null){
-        return true;
-      }else {
-        map.put(c,1);
-      }
-    }
-    return false;
-  }
 }
