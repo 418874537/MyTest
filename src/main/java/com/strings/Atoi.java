@@ -1,3 +1,5 @@
+package com.strings;
+
 /**
  * @Description:
  * @Author: mayingjie@sensorsdata.com

@@ -1,14 +1,15 @@
-import java.util.LinkedList;
-import java.util.List;
+package com.arrays;
+
+import com.ListNode;
 
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class java.arrays.java.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     java.arrays.java.ListNode next;
+ *     java.arrays.java.ListNode() {}
+ *     java.arrays.java.ListNode(int val) { this.val = val; }
+ *     java.arrays.java.ListNode(int val, java.arrays.java.ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class MergeTwoLists {
@@ -62,16 +63,3 @@ class MergeTwoLists {
     }
 }
 
-class ListNode {
-      int val;
-      ListNode next;
-
-    @Override
-    public String toString() {
-        return "{" + val + ", next=" + next + '}';
-    }
-
-    ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
