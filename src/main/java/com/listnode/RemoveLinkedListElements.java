@@ -26,7 +26,7 @@ import java.util.List;
  1 <= Node.val <= 50
  0 <= val <= 50
  */
-public class RemoveElements {
+public class RemoveLinkedListElements {
   public static ListNode removeElements(ListNode head, int val) {
     ListNode headBefore = new ListNode(0,head);
     ListNode tail = headBefore;
